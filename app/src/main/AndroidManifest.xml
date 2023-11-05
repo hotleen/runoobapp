@@ -123,6 +123,7 @@
         <activity android:name=".views.homePage.ui.activity.VideoPlayActivity" />
         <activity android:name=".views.homePage.ui.activity.VideoSelectActivity" />
         <activity android:name=".views.todaySteps.TodayStepsActivity" />
+        <activity android:name=".views.practice.UIPracticePage" />
 
         <service
             android:name=".views.service.MyService"
