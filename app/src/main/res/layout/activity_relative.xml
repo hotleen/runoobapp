@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 相对布局 相对于父容器左上角位置布局   -->
+    <RelativeLayout
+        android:id="@+id/relative_one"
+        android:background="@color/red"
+        android:layout_centerInParent="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+    <!--    toLeftOf 相对兄弟容器-->
+    <RelativeLayout
+        android:layout_toStartOf="@id/relative_one"
+        android:background="@color/green"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+</RelativeLayout>

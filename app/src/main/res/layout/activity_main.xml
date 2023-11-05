@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tv_one"
+            android:text="@string/text_content"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:textStyle="italic"
+            android:textSize="30sp"
+            android:shadowColor="@color/red"
+            android:shadowRadius="3.0"
+            android:shadowDx="10.0"
+            android:shadowDy="10.0"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <!--   跑马灯效果依赖自动获取焦点     -->
+            <requestFocus/>
+
+        </TextView>
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:text="@string/FIRST_BUTTON_TEXT"
+            android:background="@drawable/btn_selector"
+            android:backgroundTint="@color/btn_color_selector"
+            >
+        </Button>
+
+        <!-- 有点类似于input文字输入框   -->
+        <EditText
+            android:hint="@string/USERNAME_INPUT_HINT"
+            android:textColor="@color/red"
+            android:inputType="phone"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_baseline_call_24"
+            android:layout_width="300dp"
+            android:layout_height="50dp">
+        </EditText>
+
+        <EditText
+            android:id="@+id/input_number"
+            android:hint="@string/PASSWORD_INPUT_HINT"
+            android:textColor="@color/red"
+            android:inputType="textPassword"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_baseline_account_balance_wallet_24"
+            android:layout_width="300dp"
+            android:layout_height="50dp">
+        </EditText>
+
+        <Button
+            android:id="@+id/get_input_btn"
+            android:text="@string/GET_USERINFO_TEXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!--类似于image-->
+        <ImageView
+            android:src="@drawable/river"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="200dp"
+            android:maxWidth="200dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/IMAGE_DESCRIPTION" />
+
+        <ProgressBar
+            android:id="@+id/pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/hide_progress_btn"
+            android:text="@string/PROGRESS_BUTTON_TEXT"
+            android:onClick="changeBarStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ProgressBar
+            android:id="@+id/pb_horizontal"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:max="100"
+            android:layout_width="300dp"
+            android:layout_height="25dp"/>
+
+        <Button
+            android:text="@string/DOWNLOAD_BAR_TEXT"
+            android:onClick="loadProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/BUTTON_PUSH_TEXT"
+            android:onClick="pushNotice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/BUTTON_CANCEL_TEXT"
+            android:onClick="cancelNotice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_NEW_PAGE_TEXT"
+            android:onClick="jumpPageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_RELATIVE_PAGE"
+            android:onClick="jumpRelativePageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_FRAME_PAGE"
+            android:onClick="jumpFramePageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_TABLE_LAYOUT_PAGE"
+            android:onClick="jumpTablePageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_GRID_LAYOUT_PAGE"
+            android:onClick="jumpGridPageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_CONSTRAINT_PAGE"
+            android:onClick="jumpConstraintPageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_RECYCLE_PAGE"
+            android:onClick="jumpRecyclePageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_ANIMATION_PAGE"
+            android:onClick="jumpAnimationPageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_VIEW_ANIMATION_PAGE"
+            android:onClick="jumpViewAnimationPageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_VALUE_ANIMATOR_PAGE"
+            android:onClick="jumpValueAnimatorPageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_VIEW_PAGER"
+            android:onClick="jumpViewPagerAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_FRAGMENT_PAGE"
+            android:onClick="jumpFragmentPagerAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/HOUSE_COUNTDOWN_TEXT"
+            android:onClick="jumpHouseCountAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_SERVICE_PAGE"
+            android:onClick="jumpServicePageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_BROADCAST_PAGE"
+            android:onClick="jumpBroadcastPageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_IMAGE_LOAD_TEXT"
+            android:onClick="jumpGlideImagePageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_REQUEST_PAGE"
+            android:onClick="jumpRequestPageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_RETROFIT_PAGE"
+            android:onClick="jumpRetrofitPageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_RXJAVA_PAGE"
+            android:onClick="jumpRXPageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_SP_PAGE"
+            android:onClick="jumpSharedPreferencePageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/input_url_path"
+            android:hint="@string/INPUT_URL_PATH"
+            android:textColor="@color/red"
+            android:inputType="textUri"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/baseline_web_24"
+            android:layout_width="300dp"
+            android:layout_height="50dp">
+        </EditText>
+
+        <Button
+            android:text="@string/JUMP_TO_WEBVIEW_PAGE"
+            android:onClick="jumpWebViewPageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_SP_DEMO"
+            android:onClick="jumpSpDemoPageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_SQLITE_PAGE"
+            android:onClick="jumpSQLDemoPageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_MEDIA_PAGE"
+            android:onClick="jumpMediaRecordDemoPageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_MEDIA_PLAYER_PAGE"
+            android:onClick="jumpMediaPlayDemoPageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_VIDEO_VIEW_TEXT"
+            android:onClick="jumpVideoViewDemoPageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/SOUND_PLAY_TEXT"
+            android:onClick="jumpSoundPlayDemoPageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_CONTACTS_DEMO_TEXT"
+            android:onClick="jumpContactsDemoPageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_POPUP_PAGE"
+            android:onClick="jumpPopupPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="@string/JUMP_AMAP_PAGE"
+            android:onClick="jumpAmapPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="jump to round activity"
+            android:onClick="jumpRoundPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="jump to new target activity"
+            android:onClick="jumpNewTarget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="jump to new home page"
+            android:onClick="jumpHomePage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="jump to today steps page"
+            android:onClick="jumpTodaySteps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+</ScrollView>

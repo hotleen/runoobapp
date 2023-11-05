@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.popupWindow.BizTransparentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:alpha="1"
+            android:background="@color/white" >
+
+            <!-- 有点类似于input文字输入框   -->
+            <EditText
+                android:hint="@string/USERNAME_INPUT_HINT"
+                android:textColor="@color/red"
+                android:inputType="phone"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_baseline_call_24"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="350dp">
+            </EditText>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+

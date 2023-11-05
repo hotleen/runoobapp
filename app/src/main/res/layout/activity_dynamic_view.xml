@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_layout"
+    >
+
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="隐藏"/>
+    <Button
+        android:id="@+id/button2"
+        android:layout_below="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示"/>
+    <Button
+        android:id="@+id/button3"
+        android:layout_below="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加布局"/>
+    <Button
+        android:id="@+id/button4"
+        android:layout_below="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="删除布局"/>
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginLeft="10px"
+        android:layout_marginBottom="10px"
+        android:orientation="horizontal"
+        android:layout_above="@+id/info_tip"
+        android:background="@android:color/darker_gray"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="精确度："/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="普通"
+            android:textColor="@android:color/black" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="精准"
+            android:textColor="@android:color/black" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/info_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="20dp"
+        android:background="@android:color/darker_gray"
+        >
+
+        <TextView
+            android:id="@+id/info_tip_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="受灾地点"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/info_tip_distance"
+            android:layout_below="@+id/info_tip_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="受灾距离"/>
+        <TextView
+            android:id="@+id/info_tip_address"
+            android:layout_toRightOf="@+id/info_tip_distance"
+            android:layout_below="@+id/info_tip_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="受灾地址"/>
+
+        <Button
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="详情"/>
+
+        <LinearLayout
+            android:layout_below="@+id/info_tip_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="驾车"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="公交"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="步行"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

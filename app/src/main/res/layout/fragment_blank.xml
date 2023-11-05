@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.fragment.BlankFragment">
+
+    <Button
+        android:id="@+id/btn_changeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/CHANGE_FRAGMENT_TEXT"
+        android:textAlignment="center"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_resetText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/CHANGE_CONTENT_TEXT"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_transfer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/PASS_MESSAGE_TEXT"
+        android:textAllCaps="false"/>
+
+    <TextView
+        android:id="@+id/fg_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment"
+        android:gravity="center"/>
+
+</LinearLayout>

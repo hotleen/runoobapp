@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray"
+        android:gravity="center_vertical|center"
+        android:text="this is activity to get today steps"
+        android:textColor="@color/red"
+        android:onClick="jumpBizPage"
+        android:textSize="18sp" />
+
+    <Button
+        android:text="get step supporting status"
+        android:onClick="getStepStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="get today steps "
+        android:onClick="getTodaySteps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</LinearLayout>

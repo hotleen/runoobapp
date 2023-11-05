@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/popup_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray"
+        android:gravity="center_vertical|center"
+        android:text="this is activity to run new target test"
+        android:textColor="@color/red"
+        android:onClick="jumpBizPage"
+        android:textSize="18sp" />
+
+    <Button
+        android:text="save image with media store"
+        android:onClick="saveImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="get permission "
+        android:onClick="requestStoragePermission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="save file to downloads"
+        android:onClick="saveFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="download file to cache dir"
+        android:onClick="downloadFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="judge file exist status in cache dir"
+        android:onClick="judgeFileStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="copy private file to downloads"
+        android:onClick="copyFileToDownloads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="copy private file to downloads without mime"
+        android:onClick="copyFileWithoutMime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="download file directly to downloads"
+        android:onClick="downloadFileDirectly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="query download file "
+        android:onClick="queryFileInDownloads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+</LinearLayout>

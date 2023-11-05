@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/popup_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:text="get amap location"
+        android:onClick="getLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.hjq.shape.view.ShapeTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_20"
+        android:gravity="center"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
+        android:text="定位结果"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18"
+        app:shape="rectangle"
+        app:shape_angle="0"
+        app:shape_centerX="0.5"
+        app:shape_centerY="0.5"
+        app:shape_endColor="@color/common_accent_color"
+        app:shape_radius="@dimen/dp_20"
+        app:shape_startColor="@color/common_button_pressed_color"
+        android:visibility="gone"
+        android:id="@+id/address_result" />
+
+    <com.hjq.shape.view.ShapeTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_20"
+        android:gravity="center"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
+        android:text="定位结果"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18"
+        app:shape="rectangle"
+        app:shape_angle="0"
+        app:shape_centerX="0.5"
+        app:shape_centerY="0.5"
+        app:shape_endColor="@color/common_accent_color"
+        app:shape_radius="@dimen/dp_20"
+        app:shape_startColor="@color/common_button_pressed_color"
+        android:visibility="gone"
+        android:id="@+id/locate_result" />
+
+
+
+    <Button
+        android:text="get sha1! "
+        android:onClick="getAppSha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="request location permission"
+        android:onClick="requestPermission"
+        android:layout_width="wrap_content"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:text="check location permission"
+        android:onClick="checkPermission"
+        android:layout_width="wrap_content"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

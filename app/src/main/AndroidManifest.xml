@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.application.runoobapp">
+
+
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- SD卡读写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--获取手机的联系人-->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!--允许访问网络，必选权限-->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--允许获取精确位置，精准定位必选-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!--允许获取粗略位置，粗略定位必选-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!--允许获取设备和运营商信息，用于问题排查和网络定位（无gps情况下的定位），若需网络定位功能则必选-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!--允许获取网络状态，用于网络定位（无gps情况下的定位），若需网络定位功能则必选-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!--允许获取wifi网络信息，用于网络定位（无gps情况下的定位），若需网络定位功能则必选-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!--允许获取wifi状态改变，用于网络定位（无gps情况下的定位），若需网络定位功能则必选-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!--后台获取位置信息，若需后台定位则必选-->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <!--用于申请调用A-GPS模块,卫星定位加速-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <!--允许写入扩展存储，用于写入缓存定位数据-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--允许读设备等信息，用于问题排查-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!--不声明权限无法读取计步数据-->
+    <uses-permission android:name="miui.permission.READ_STEPS" />
+
+    <application
+        android:name=".base.app.AppApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_kodee"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_kodee_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RunoobApp.NoActionBar"
+        android:usesCleartextTraffic="true">
+
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="182e34a178ee90ed67e699e393a42c2b">
+        </meta-data>
+        <!-- 默认的activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+            <!-- 激活默认的activity的意图 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- activity组件必须在清单文件中注册 -->
+        <activity android:name=".views.notification.NotificationActivity" />
+        <activity android:name=".views.countdown.CountDownActivity" />
+        <activity android:name=".views.layoutPage.RelativeActivity" />
+        <activity android:name=".views.layoutPage.FrameActivity" />
+        <activity android:name=".views.layoutPage.TableActivity" />
+        <activity android:name=".views.layoutPage.GridActivity" />
+        <activity android:name=".views.layoutPage.ConstraintActivity" />
+        <activity android:name=".views.recycler.RecycleActivity" />
+        <activity android:name=".views.animation.AnimationActivity" />
+        <activity android:name=".views.animation.ViewAnimationActivity" />
+        <activity android:name=".views.animation.ValueAnimatorActivity" />
+        <activity android:name=".views.viewpager.ViewPagerActivity" />
+        <activity android:name=".views.fragment.FragmentActivity" />
+        <activity android:name=".views.housecountdown.HouseCountDownActivity" />
+        <activity android:name=".views.service.ServiceActivity" />
+        <activity android:name=".views.myReceiver.ReceiverActivity" />
+        <activity android:name=".views.glideImage.ImageLoadActivity" />
+        <activity android:name=".views.okRequest.RequestActivity" />
+        <activity android:name=".views.myRetrofit.RetrofitActivity" />
+        <activity android:name=".views.rxJava.RXActivity" />
+        <activity android:name=".views.sharedPreference.SPActivity" />
+        <activity android:name=".views.webview.WebViewActivity" />
+        <activity android:name=".views.spDemo.SPDemoActivity" />
+        <activity android:name=".views.mySqlite.SqliteDemoActivity" />
+        <activity android:name=".views.media.MediaRecordActivity" />
+        <activity android:name=".views.media.MediaPlayerActivity" />
+        <activity android:name=".views.media.VideoViewActivity" />
+        <activity android:name=".views.media.SoundPoolActivity" />
+        <activity android:name=".views.contentProvider.ContactsDemoActivity" />
+        <activity android:name=".views.handlerDemo.HandlerActivity" />
+        <activity android:name=".views.popupWindow.PopupActivity" />
+        <activity
+            android:name=".views.popupWindow.BizTransparentActivity"
+            android:theme="@style/Theme.ActivityDialogStyle" />
+        <activity android:name=".views.popupWindow.DynamicViewActivity" />
+        <activity android:name=".views.popupWindow.DynamicViewTestPage" />
+        <activity android:name=".views.amap.AmapDemoActivity" />
+        <activity android:name=".views.roundDemo.RoundActivity" />
+        <activity android:name=".views.newTarget.NewTargetActivity" />
+        <activity android:name=".views.homePage.ui.activity.HomeActivity" />
+        <activity android:name=".views.homePage.ui.activity.BrowserActivity" />
+        <activity android:name=".views.homePage.ui.activity.CameraActivity" />
+        <activity android:name=".views.homePage.ui.activity.ImagePreviewActivity" />
+        <activity android:name=".views.homePage.ui.activity.ImageSelectActivity" />
+        <activity android:name=".views.homePage.ui.activity.VideoPlayActivity" />
+        <activity android:name=".views.homePage.ui.activity.VideoSelectActivity" />
+        <activity android:name=".views.todaySteps.TodayStepsActivity" />
+
+        <service
+            android:name=".views.service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service android:name="com.amap.api.location.APSService"></service>
+
+
+        <receiver
+            android:name=".views.myReceiver.CustomReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.runoob.receiver" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

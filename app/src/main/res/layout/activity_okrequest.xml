@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.okRequest.RequestActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SEND_SYNC_GET_REQUEST"
+        android:onClick="sendGetRequestSync"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SEND_ASYNC_GET_REQUEST"
+        android:onClick="sendGetRequestAsync"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SEND_SYNC_POST_REQUEST"
+        android:onClick="sendPostRequestSync"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SEND_ASYNC_POST_REQUEST"
+        android:onClick="sendPostRequestAsync"
+        android:textAllCaps="false"/>
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.myRetrofit.RetrofitActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="postAsyncWithRetrofit"
+        android:text="@string/SEND_RETROFIT_POST_REQUEST"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="getAsyncWithRetrofit"
+        android:text="@string/SEND_RETROFIT_GET_REQUEST"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="convertToBean"
+        android:text="@string/CONVERT_JSON_TO_BEAN"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="autoConvert"
+        android:text="@string/AUTO_CONVERT_JSON"
+        android:textAllCaps="false" />
+</LinearLayout>
