@@ -52,25 +52,40 @@
             android:backgroundTint="@color/btn_color_selector"
             android:text="@string/FIRST_BUTTON_TEXT" />
 
-        <!-- 有点类似于input文字输入框   -->
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:drawableStart="@drawable/ic_baseline_call_24"
-            android:drawablePadding="10dp"
-            android:hint="@string/USERNAME_INPUT_HINT"
-            android:inputType="phone"
-            android:textColor="@color/red" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/input_number"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:drawableStart="@drawable/ic_baseline_account_balance_wallet_24"
-            android:drawablePadding="10dp"
-            android:hint="@string/PASSWORD_INPUT_HINT"
-            android:inputType="textPassword"
-            android:textColor="@color/red" />
+
+            <!-- 有点类似于input文字输入框   -->
+            <EditText
+                android:id="@+id/input_name"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:drawableStart="@drawable/ic_baseline_call_24"
+                android:drawablePadding="10dp"
+                android:hint="@string/USERNAME_INPUT_HINT"
+                android:inputType="phone"
+                android:textColor="@color/red" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="-100dp"
+                android:layout_toRightOf="@id/input_name"
+                android:text="切换键" />
+
+            <EditText
+                android:id="@+id/input_number"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/input_name"
+                android:drawableStart="@drawable/ic_baseline_account_balance_wallet_24"
+                android:drawablePadding="10dp"
+                android:hint="@string/PASSWORD_INPUT_HINT"
+                android:inputType="textPassword"
+                android:textColor="@color/red" />
+        </RelativeLayout>
 
         <Button
             android:id="@+id/get_input_btn"
