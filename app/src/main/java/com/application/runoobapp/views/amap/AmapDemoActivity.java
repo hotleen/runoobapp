@@ -58,6 +58,8 @@ public class AmapDemoActivity extends AppCompatActivity implements EasyPermissio
                         addressResult.append("号");
                     }
 
+                    addressResult.append("  origin street: ").append(result.getStreetNum());
+
                     locationResultTextView.setText(locationResult.toString());
                     addressResultTextView.setText(addressResult.toString());
 
