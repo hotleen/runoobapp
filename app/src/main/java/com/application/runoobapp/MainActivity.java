@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * 跳转网格布局
+     * 跳转约束布局
      *
      * @param view 视图
      */
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * 跳转网格布局
+     * 跳转RecyclerView布局
      *
      * @param view 视图
      */
@@ -207,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * 跳转broadcast activity
+     * 跳转Glide  activity
      *
      * @param view 视图
      */
@@ -227,7 +227,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * 跳转request activity
+     * 跳转retrofit request activity
      *
      * @param view 视图
      */
@@ -283,7 +283,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * 跳转sp demo activity
+     * 跳转sql activity
      * @param view 视图
      */
     public void jumpSQLDemoPageAction(View view) {
