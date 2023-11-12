@@ -219,7 +219,7 @@
             android:layout_height="wrap_content"/>
 
         <Button
-            android:text="jump to new home page"
+            android:text="jump to splash page"
             android:onClick="jumpHomePage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>

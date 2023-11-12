@@ -16,7 +16,7 @@ import com.application.runoobapp.views.contentProvider.ContactsDemoActivity;
 import com.application.runoobapp.views.countdown.CountDownActivity;
 import com.application.runoobapp.views.fragment.FragmentActivity;
 import com.application.runoobapp.views.glideImage.ImageLoadActivity;
-import com.application.runoobapp.views.homePage.ui.activity.HomeActivity;
+import com.application.runoobapp.views.homePage.ui.activity.SplashActivity;
 import com.application.runoobapp.views.housecountdown.HouseCountDownActivity;
 import com.application.runoobapp.views.layoutPage.ConstraintActivity;
 import com.application.runoobapp.views.layoutPage.FrameActivity;
@@ -357,7 +357,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void jumpHomePage(View view) {
-        HomeActivity.start(this);
+        SplashActivity.start(this);
     }
 
     public void jumpTodaySteps(View view) {
