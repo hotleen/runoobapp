@@ -15,4 +15,24 @@ public class Step {
         this.mMode = mMode;
         this.mSteps = mSteps;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public long getmBeginTime() {
+        return mBeginTime;
+    }
+
+    public long getmEndTime() {
+        return mEndTime;
+    }
+
+    public int getmMode() {
+        return mMode;
+    }
+
+    public int getmSteps() {
+        return mSteps;
+    }
 }
