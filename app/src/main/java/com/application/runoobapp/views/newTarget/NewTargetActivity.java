@@ -16,22 +16,27 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.application.runoobapp.R;
+import com.application.runoobapp.base.action.ToastAction;
 import com.application.runoobapp.util.DownloadUtils;
 import com.application.runoobapp.util.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.List;
 
 import pub.devrel.easypermissions.EasyPermissions;
 
-public class NewTargetActivity extends AppCompatActivity {
+public class NewTargetActivity extends AppCompatActivity implements ToastAction, EasyPermissions.PermissionCallbacks {
 
     private static final String TAG = NewTargetActivity.class.getSimpleName();
+
+    private static final int READ_PHONE_PERMISSION_REQUEST_CODE = 102;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -263,4 +268,44 @@ public class NewTargetActivity extends AppCompatActivity {
             FileUtils.getInstance().listFiles(this);
         }
     }
+
+    public void getReadPhonePermission(View view) {
+        String[] perms = {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.READ_PHONE_STATE};
+        if (EasyPermissions.hasPermissions(this, perms)) {
+            toast("已经获取了Read_Phone_State权限");
+        } else {
+            toast("没有Read_Phone_State权限");
+        }
+    }
+
+    //TODO: 这里还有问题
+    public void requestReadPhonePermission(View view) {
+        String[] perms = {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.READ_PHONE_STATE};
+        if (!EasyPermissions.hasPermissions(this, perms)) {
+            EasyPermissions.requestPermissions(this, "请求获取读取设备权限",READ_PHONE_PERMISSION_REQUEST_CODE,
+                     perms);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        // 将结果传递给EasyPermissions
+        EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, this);
+    }
+
+    @Override
+    public void onPermissionsGranted(int requestCode, @NonNull List<String> perms) {
+        if (requestCode == READ_PHONE_PERMISSION_REQUEST_CODE){
+            toast("用户同意了Read_Phone_State权限");
+        }
+    }
+
+    @Override
+    public void onPermissionsDenied(int requestCode, @NonNull List<String> perms) {
+        if (EasyPermissions.somePermissionPermanentlyDenied(this, perms)){
+            toast("用户拒绝了Read_Phone_State权限");
+        }
+    }
+
 }

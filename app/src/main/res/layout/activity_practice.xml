@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/popup_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray"
+            android:gravity="center_vertical|center"
+            android:onClick="jumpBizPage"
+            android:text="this is activity to show basic ui test"
+            android:textColor="@color/red"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:clickable="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:shadowColor="@color/red"
+            android:shadowDx="10.0"
+            android:shadowDy="10.0"
+            android:shadowRadius="3.0"
+            android:singleLine="true"
+            android:text="@string/text_content"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="italic">
+            <!--   跑马灯效果依赖自动获取焦点     -->
+            <requestFocus />
+        </TextView>
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:background="@drawable/btn_selector"
+            android:backgroundTint="@color/btn_color_selector"
+            android:text="@string/FIRST_BUTTON_TEXT" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <!-- 有点类似于input文字输入框   -->
+            <EditText
+                android:id="@+id/input_name"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:drawableStart="@drawable/ic_baseline_call_24"
+                android:drawablePadding="10dp"
+                android:hint="@string/USERNAME_INPUT_HINT"
+                android:inputType="phone"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/shape_button"
+                android:gravity="center"
+                android:text="切换键"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_10" />
+
+
+            <EditText
+                android:id="@+id/input_number"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/input_name"
+                android:drawableStart="@drawable/ic_baseline_account_balance_wallet_24"
+                android:drawablePadding="10dp"
+                android:hint="@string/PASSWORD_INPUT_HINT"
+                android:inputType="textPassword"
+                android:textColor="@color/red" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/get_input_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/GET_USERINFO_TEXT" />
+
+        <!--类似于image-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/IMAGE_DESCRIPTION"
+            android:maxWidth="200dp"
+            android:maxHeight="200dp"
+            android:src="@drawable/river" />
+
+        <ProgressBar
+            android:id="@+id/pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/hide_progress_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="changeBarStatus"
+            android:text="@string/PROGRESS_BUTTON_TEXT" />
+
+        <ProgressBar
+            android:id="@+id/pb_horizontal"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="300dp"
+            android:layout_height="25dp"
+            android:max="100" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="loadProgress"
+            android:text="@string/DOWNLOAD_BAR_TEXT" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="pushNotice"
+            android:text="@string/BUTTON_PUSH_TEXT" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="cancelNotice"
+            android:text="@string/BUTTON_CANCEL_TEXT" />
+
+
+    </LinearLayout>
+</ScrollView>
