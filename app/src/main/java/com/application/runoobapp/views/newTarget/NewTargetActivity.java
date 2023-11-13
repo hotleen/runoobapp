@@ -278,9 +278,8 @@ public class NewTargetActivity extends AppCompatActivity implements ToastAction,
         }
     }
 
-    //TODO: 这里还有问题
     public void requestReadPhonePermission(View view) {
-        String[] perms = {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.READ_PHONE_STATE};
+        String[] perms = {Manifest.permission.READ_PHONE_STATE};
         if (!EasyPermissions.hasPermissions(this, perms)) {
             EasyPermissions.requestPermissions(this, "请求获取读取设备权限",READ_PHONE_PERMISSION_REQUEST_CODE,
                      perms);
