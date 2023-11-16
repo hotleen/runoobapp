@@ -1,12 +1,11 @@
 package com.application.runoobapp.views.countdown;
 
 import android.app.Activity;
-import android.os.Build;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListView;
-
-import androidx.annotation.RequiresApi;
 
 import com.application.runoobapp.R;
 
@@ -34,5 +33,11 @@ public class CountDownActivity extends Activity {
 
         listView.setOnItemClickListener((parent, view, position, id) -> Log.i(TAG, "onItem click: "+position));
 
+    }
+
+    public static void start(Context context) {
+        Intent intent = new Intent(context, CountDownActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
     }
 }

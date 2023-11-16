@@ -307,4 +307,7 @@ public class NewTargetActivity extends AppCompatActivity implements ToastAction,
         }
     }
 
+    public void readAssetsFile(View view) {
+        FileUtils.getInstance().readAssetsFile(this.getApplicationContext());
+    }
 }

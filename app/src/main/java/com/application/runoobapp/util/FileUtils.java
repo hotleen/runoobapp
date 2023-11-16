@@ -3,14 +3,19 @@ package com.application.runoobapp.util;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.res.AssetManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.MediaStore;
+import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Log;
 
 import androidx.annotation.RequiresApi;
+
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -18,6 +23,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.lang.reflect.Method;
 
 public class FileUtils {
 
@@ -128,5 +134,55 @@ public class FileUtils {
             }
         }
         return base64Result;
+    }
+
+    public void readAssetsFile(Context context) {
+        AssetManager manager = context.getAssets();
+        InputStream inputStream = null;
+        try {
+            inputStream = manager.open("router.xml");
+            XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+            XmlPullParser parser = factory.newPullParser();
+            parser.setInput(inputStream, "UTF-8");
+
+            int eventType = parser.getEventType();
+            while (eventType != XmlPullParser.END_DOCUMENT) {
+                if (eventType == XmlPullParser.START_TAG) {
+                    String tagName = parser.getName();
+                    if (!TextUtils.isEmpty(tagName)&&TextUtils.equals(tagName, "activity")){
+                        Log.i(TAG, "readAssetsFile: tagName: " + tagName);
+                        String activityName = parser.getAttributeValue(0);
+                        Log.i(TAG, "readAssetsFile: activityName: " + activityName);
+                        String className = "com.application.runoobapp" + activityName;
+                        Log.i(TAG, "readAssetsFile: className: " + className);
+
+                        Class clazz = Class.forName(className);
+                        if (clazz == null) {
+                            return;
+                        }
+                        Method method = clazz.getMethod("start", Context.class);
+                        if (method == null) {
+                            return;
+                        }
+                        method.invoke(null, context);
+                    }
+
+                    // 处理 XML 标签
+                }
+                eventType = parser.next();
+            }
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }finally {
+            if (inputStream != null) {
+                try {
+                    inputStream.close();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+        }
     }
 }
