@@ -79,6 +79,21 @@
                 android:textColor="@color/red"
                 android:textSize="@dimen/sp_10" />
 
+            <TextView
+                android:id="@+id/tv_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/round_rectangle_bg"
+                android:paddingBottom="1dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingTop="1dp"
+                android:textSize="@dimen/dp_10"
+                android:text="生僻字"
+                android:textColor="@color/black" />
+
 
             <EditText
                 android:id="@+id/input_number"
